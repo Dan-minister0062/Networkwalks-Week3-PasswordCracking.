@@ -1,4 +1,4 @@
-#         🔐 Networkwalks Week 3 – PDF Password Cracking
+# 🔐 Networkwalks Week 3 – PDF Password Security & Cryptography
 
 <p align="center">
   <img src="https://img.shields.io/badge/Networkwalks-Cybersecurity%20Internship-blue?style=for-the-badge" alt="Networkwalks Internship"/>
