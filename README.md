@@ -8,12 +8,36 @@ Password Hash Extraction and Dictionary-Based Password Recovery
 </p>
 ---
 📌 Project Overview
+<p align="center">
+  <b>Week 3 | PDF Password Security &amp; Cryptography</b>
+  <br/>
+  <i>Comparing a local password-auditing workflow with an online password-auditing workflow.</i>
+</p>
 This repository documents my Week 3 practical cybersecurity project as part of the Networkwalks Cybersecurity Internship (Batch B082).
-The project focuses on PDF password security, hash extraction, and dictionary-based password recovery. The objective was to examine the strength of a password-protected PDF by extracting its password hash and testing whether a dictionary attack could recover the password.
-To compare two different approaches, I completed the practical exercise using:
-John the Ripper (JTR) with Johnny GUI – a local password-auditing workflow.
-Networkwalks (NW) online tools – the Hash Calculator and Password Cracker.
-Both methods successfully recovered the password used for the test PDF. The recovered password was then used to open the document and capture the flag.
+The exercise focused on assessing the password strength of an authorized, password-protected PDF. I extracted the document's password hash and tested whether a dictionary attack could recover the password. To compare two approaches, I completed the practical using two separate labs.
+🧪 Lab 1 — Local Password Auditing (John the Ripper)
+Item	Description
+Tools	John the Ripper (Jumbo) and Johnny GUI
+Environment	Local Windows-based workflow
+Main process	Extract the PDF hash in `$pdf$` format, load it into the JTR/Johnny workflow, and run a dictionary attack
+Evidence	14 screenshots — `JTR-01` to `JTR-14`
+Outcome	The password was successfully recovered and used to open the test PDF
+🌐 Lab 2 — Online Password Auditing (Networkwalks Tools)
+Item	Description
+Tools	Networkwalks Hash Calculator and Networkwalks Password Cracker
+Environment	Browser-based online workflow
+Main process	Extract the PDF hash with the Hash Calculator, submit it to the Password Cracker, and run its built-in dictionary attack
+Evidence	7 screenshots — `NW-01` to `NW-07`
+Outcome	The password was successfully recovered and used to unlock the test PDF and capture the flag
+🏁 Overall Result
+<p align="center">
+  <img src="https://img.shields.io/badge/Local%20JTR-Success-success?style=for-the-badge" alt="Local JTR successful"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Networkwalks-Success-success?style=for-the-badge" alt="Networkwalks successful"/>
+</p>
+Both labs recovered the same test password: `password1`. This result demonstrates how a common and predictable password can be vulnerable to dictionary-based guessing.
+> **Scope and ethical use:** This was an educational exercise performed on the authorized test PDF. Password recovery should only be attempted on documents that you own or have explicit permission to assess. Do not publish real passwords, extracted hashes, or confidential document contents.
+---
 🎯 Project Objectives
 Understand the role of password hashes in protected PDF documents.
 Extract a PDF password hash in the supported `$pdf$` format.
