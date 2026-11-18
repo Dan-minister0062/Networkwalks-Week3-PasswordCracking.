@@ -1,235 +1,116 @@
-🔐 Networkwalks Cybersecurity Internship --- Week 3
-PDF Password Security Assessment | John the Ripper & Networkwalks Tools
-```{=html}
-<p align="center">
-```
-`<img src="https://img.shields.io/badge/Program-Networkwalks%20Cybersecurity%20Internship-0A66C2?style=for-the-badge" alt="Networkwalks Internship">`{=html}
-`<img src="https://img.shields.io/badge/Batch-B082-6A5ACD?style=for-the-badge" alt="Batch B082">`{=html}
-`<img src="https://img.shields.io/badge/Week-03-2E8B57?style=for-the-badge" alt="Week 3">`{=html}
-`<img src="https://img.shields.io/badge/Focus-Cryptography%20%26%20Password%20Security-8A2BE2?style=for-the-badge" alt="Cryptography and Password Security">`{=html}
-```{=html}
-</p>
-```
+<div align="center">
+🔐 NETWORKWALKS CYBERSECURITY INTERNSHIP
+WEEK 3 — PDF PASSWORD SECURITY & CRYPTOGRAPHY
+Batch B082 | Practical Lab Report & Evidence
+![John the Ripper](https://img.shields.io/badge/Tool-John%20the%20Ripper-red?style=for-the-badge)
+![Networkwalks](https://img.shields.io/badge/Tool-Networkwalks%20Tools-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+</div>
+---
 📌 Project Overview
-This project documents a controlled PDF password-security exercise
-completed during Week 3 of the Networkwalks Cybersecurity Internship
-(Batch B082). The objective was to assess the resistance of a
-password-protected PDF to dictionary-based password recovery.
-The practical exercise was completed using two independent
-approaches:
-John the Ripper (JTR) with Johnny GUI --- a local
-password-auditing workflow.
-Networkwalks online tools --- the Hash Calculator and Password
-Cracker.
-Both methods recovered the test PDF password, `password1`, and enabled
-the protected PDF to be opened and the lab flag to be captured.
-> **Lab scope:** This documentation describes an authorized educational
-> exercise using a test PDF. It does not describe or authorize attempts
-> to access documents or accounts belonging to other people.
+During Week 3 of the NETWORKWALKS Cybersecurity Internship, I carried out a practical exercise focused on PDF password security, hash extraction, and dictionary-based password recovery.
+The objective was to examine the security of an encrypted PDF by extracting its password hash and testing whether a dictionary attack could recover the password. To compare two approaches, I completed the exercise with:
+John the Ripper (JTR) — a local password-auditing tool, using the Johnny graphical interface.
+Networkwalks (NW) online tools — the Hash Calculator and Password Cracker.
+Both approaches successfully recovered the test PDF password. The recovered value is documented in the results section below.
+> **Scope note:** This was an educational exercise performed on the supplied/test PDF as part of the internship. Password recovery should only be attempted on files that you own or are explicitly authorized to assess.
 🎯 Objectives
-Understand how password-protected PDF files can be assessed through
-password-hash extraction.
-Extract a PDF password hash for offline auditing.
-Configure and use John the Ripper through the Johnny graphical
-interface.
-Perform a dictionary-based password-recovery attempt with a local
-tool.
-Use the Networkwalks Hash Calculator and Password Cracker as a
-separate web-based workflow.
-Compare the outcomes of local and web-based password-auditing
-methods.
-Document the process with separate evidence sets for each method.
-Identify practical lessons for creating stronger passwords.
-🧰 Tools and Technologies
+Understand how password-protected PDF files store password-verification data.
+Extract a PDF hash for password-auditing purposes.
+Use John the Ripper/Johnny to perform a dictionary attack locally.
+Use the Networkwalks Hash Calculator and Password Cracker to repeat the test online.
+Compare the outcomes of the two methods.
+Document the process with organized screenshot evidence.
+🧰 Tools & Technologies
+Tool	Purpose
+John the Ripper (Jumbo)	Local password auditing and dictionary attack
+Johnny GUI	Graphical frontend for John the Ripper
+Networkwalks Hash Calculator	Extract the hash from the test PDF
+Networkwalks Password Cracker	Test the extracted hash with a dictionary attack
+Encrypted PDF	Test file used for the authorized exercise
 ---
-Tool                                Purpose
----
-John the Ripper Jumbo               Local password-hash auditing and
-dictionary attack
-Johnny GUI                          Graphical frontend for John the
-Ripper
-Networkwalks Hash Calculator        Web-based extraction/calculation of
-the PDF hash
-Networkwalks Password Cracker       Web-based dictionary
-password-recovery exercise
-Password-protected PDF              Authorized lab file used for the
-exercise
-🧪 Method 1 --- Local Password Auditing with John the Ripper
-Evidence set: 14 screenshots (`JTR-01` to `JTR-14`).
-The first workflow used John the Ripper locally, with Johnny as its
-graphical frontend.
+🧪 Part 1 — John the Ripper (JTR)
+Evidence: 14 screenshots — `JTR-01` to `JTR-14`.
+The first method used a local password-auditing workflow. The PDF hash was extracted and supplied to John the Ripper through the Johnny interface. A dictionary attack was then performed against the extracted hash.
 Workflow
-Prepared the password-protected PDF supplied for the lab.
-Extracted the PDF password hash into a format suitable for password
-auditing.
-Opened/configured Johnny, the graphical frontend for John the Ripper
-Jumbo.
-Loaded the extracted hash into the local auditing workflow.
-Ran a dictionary-based password-recovery attempt.
-Observed the recovered password result.
-Used the recovered password to open the test PDF and continue the
-lab exercise.
-Result: The local John the Ripper workflow recovered the test
-password `password1`.
-John the Ripper evidence
+Prepared the encrypted test PDF for analysis.
+Extracted the PDF password hash in the `$pdf$` format.
+Configured and opened Johnny, the graphical frontend for John the Ripper Jumbo, on Windows.
+Loaded the extracted hash into the password-auditing workflow.
+Ran a dictionary attack.
+Confirmed that the password was recovered and used it to open the test PDF.
+JTR Screenshot Evidence
+Click any screenshot to open the original full-size image.
+<a href="https://github.com/user-attachments/assets/110c95d8-db2f-4027-ba3d-8b49025cbe34"><img src="https://github.com/user-attachments/assets/110c95d8-db2f-4027-ba3d-8b49025cbe34" alt="John the Ripper evidence 01" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/b2ba1971-8678-4fbe-b703-b28ee0bd5301"><img src="https://github.com/user-attachments/assets/b2ba1971-8678-4fbe-b703-b28ee0bd5301" alt="John the Ripper evidence 02" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/f662cf0e-153c-4591-8c9a-5f3aff82005b"><img src="https://github.com/user-attachments/assets/f662cf0e-153c-4591-8c9a-5f3aff82005b" alt="John the Ripper evidence 03" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/2eddb788-9cce-4606-abee-339acedb2908"><img src="https://github.com/user-attachments/assets/2eddb788-9cce-4606-abee-339acedb2908" alt="John the Ripper evidence 04" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/8813feb0-09b3-42e6-85c2-de91fd603f95"><img src="https://github.com/user-attachments/assets/8813feb0-09b3-42e6-85c2-de91fd603f95" alt="John the Ripper evidence 05" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/fa080fb1-92d7-4a45-9a42-c4de6af6be0e"><img src="https://github.com/user-attachments/assets/fa080fb1-92d7-4a45-9a42-c4de6af6be0e" alt="John the Ripper evidence 06" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/65966297-338a-4556-9a2d-3bd58be1e564"><img src="https://github.com/user-attachments/assets/65966297-338a-4556-9a2d-3bd58be1e564" alt="John the Ripper evidence 07" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/672e6f5e-0ab0-4a51-85c0-5fb6764ad969"><img src="https://github.com/user-attachments/assets/672e6f5e-0ab0-4a51-85c0-5fb6764ad969" alt="John the Ripper evidence 08" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/8c65c364-2264-4bb7-9cc2-4e2ea107b0a9"><img src="https://github.com/user-attachments/assets/8c65c364-2264-4bb7-9cc2-4e2ea107b0a9" alt="John the Ripper evidence 09" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/340a2fc1-909c-45b1-a0c0-c814b8986ef8"><img src="https://github.com/user-attachments/assets/340a2fc1-909c-45b1-a0c0-c814b8986ef8" alt="John the Ripper evidence 10" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/d9925ba8-62c8-4637-84ef-499523185773"><img src="https://github.com/user-attachments/assets/d9925ba8-62c8-4637-84ef-499523185773" alt="John the Ripper evidence 11" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/143ce2c6-30be-4dd9-abb5-15122ac2316d"><img src="https://github.com/user-attachments/assets/143ce2c6-30be-4dd9-abb5-15122ac2316d" alt="John the Ripper evidence 12" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/ef33dfd6-4a64-485c-bdab-45df6c09eae0"><img src="https://github.com/user-attachments/assets/ef33dfd6-4a64-485c-bdab-45df6c09eae0" alt="John the Ripper evidence 13" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/0f353cf5-32de-4bbf-aadb-86fc92e3da74"><img src="https://github.com/user-attachments/assets/0f353cf5-32de-4bbf-aadb-86fc92e3da74" alt="John the Ripper evidence 14" width="48%"></a>
 ---
-Evidence ID             Original screenshot     Evidence
-label
----
-JTR-01                  W3P1                    Open
-screenshot
-JTR-02                  W3P2                    Open
-screenshot
-JTR-03                  W3P3                    Open
-screenshot
-JTR-04                  W3P4                    Open
-screenshot
-JTR-05                  W3P5                    Open
-screenshot
-JTR-06                  W3P6                    Open
-screenshot
-JTR-07                  W3P7                    Open
-screenshot
-JTR-08                  W3P8                    Open
-screenshot
-JTR-09                  W3P9                    Open
-screenshot
-JTR-10                  W3P10                   Open
-screenshot
-JTR-11                  W3P11                   Open
-screenshot
-JTR-12                  W3P12                   Open
-screenshot
-JTR-13                  W3P13                   Open
-screenshot
-JTR-14                  W3P14                   Open
-screenshot
-🌐 Method 2 --- Web-Based Password Auditing with Networkwalks Tools
-Evidence set: 7 screenshots (`NW-01` to `NW-07`).
-The second workflow used the Networkwalks web tools, independently of
-the local John the Ripper workflow.
+🌐 Part 2 — Networkwalks (NW) Online Tools
+Evidence: 7 screenshots — `NW-01` to `NW-07`.
+The second method used the online tools provided by Networkwalks. This allowed the same PDF password-recovery exercise to be carried out through a browser-based workflow.
 Workflow
 Opened the Networkwalks Hash Calculator.
-Used the tool to extract/calculate the hash from the
-password-protected PDF.
-Copied the resulting hash into the Networkwalks Password Cracker.
-Ran the available dictionary-based password-recovery process.
-Reviewed the recovered password result.
-Used the recovered password to open the test PDF and capture the lab
-flag.
-Result: The Networkwalks workflow also recovered the test password
-`password1`.
-Networkwalks evidence
+Submitted the authorized test PDF and extracted its hash.
+Copied the resulting hash.
+Opened the Networkwalks Password Cracker.
+Submitted the hash and ran the built-in dictionary attack.
+Recovered the password and used it to unlock the PDF and capture the flag.
+Networkwalks Screenshot Evidence
+Click any screenshot to open the original full-size image.
+<a href="https://github.com/user-attachments/assets/8979a3ae-d7d1-4c2c-8bc3-557bc7686deb"><img src="https://github.com/user-attachments/assets/8979a3ae-d7d1-4c2c-8bc3-557bc7686deb" alt="Networkwalks tool evidence 01" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/b06467ae-a392-4502-ade9-b3bd00428195"><img src="https://github.com/user-attachments/assets/b06467ae-a392-4502-ade9-b3bd00428195" alt="Networkwalks tool evidence 02" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/302c9bbc-8a66-45d5-8306-f12a25aac272"><img src="https://github.com/user-attachments/assets/302c9bbc-8a66-45d5-8306-f12a25aac272" alt="Networkwalks tool evidence 03" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/5c6e2a84-5780-4913-9f92-bbffe62cc759"><img src="https://github.com/user-attachments/assets/5c6e2a84-5780-4913-9f92-bbffe62cc759" alt="Networkwalks tool evidence 04" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/c0148e17-fa4a-4f6b-a056-c896f46b3bad"><img src="https://github.com/user-attachments/assets/c0148e17-fa4a-4f6b-a056-c896f46b3bad" alt="Networkwalks tool evidence 05" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/24c6ccb7-6040-4230-878d-313a08a5383e"><img src="https://github.com/user-attachments/assets/24c6ccb7-6040-4230-878d-313a08a5383e" alt="Networkwalks tool evidence 06" width="48%"></a>
+<a href="https://github.com/user-attachments/assets/3c5d7a39-7add-412f-97cc-0f614e0fd2fc"><img src="https://github.com/user-attachments/assets/3c5d7a39-7add-412f-97cc-0f614e0fd2fc" alt="Networkwalks tool evidence 07" width="48%"></a>
 ---
-Evidence ID             Original screenshot     Evidence
-label
----
-NW-01                   W3P1                    Open
-screenshot
-NW-02                   W3P2                    Open
-screenshot
-NW-03                   W3P3                    Open
-screenshot
-NW-04                   W3P4                    Open
-screenshot
-NW-05                   W3P5                    Open
-screenshot
-NW-06                   W3P6                    Open
-screenshot
-NW-07                   W3P7                    Open
-screenshot
-📊 Results and Comparison
----
-Assessment item         John the Ripper /       Networkwalks tools
-Johnny
----
-Approach                Local password auditing Web-based
-password-auditing
-workflow
-Hash handling           Extracted PDF hash and  Used the Networkwalks
-loaded it into the      Hash Calculator
-local tool
-Recovery method         Dictionary attack       Built-in dictionary
-attack
-Outcome                 Password recovered      Password recovered
-Recovered lab password  `password1`             `password1`
-PDF access              Test PDF opened         Test PDF opened; lab
-flag captured
-Both approaches reached the same result. This demonstrates that a
-commonly used password can be vulnerable to dictionary-based guessing.
-The result is specific to the test PDF and the wordlist/attack
-conditions used in this lab; it should not be interpreted as a benchmark
-of either tool's overall speed or effectiveness.
-🔎 Key Learning Outcomes
-A password-protected PDF stores password-verification data that can
-be assessed through an extracted hash.
-Password-hash extraction is distinct from decrypting the PDF itself.
-Dictionary attacks test candidate passwords from a wordlist against
-the extracted hash.
-A weak or commonly used password may be recovered quickly if it
-appears in the tested wordlist.
-Local tools provide control over the auditing environment and
-workflow.
-Web-based tools can provide a convenient alternative, but users
-should consider the privacy implications of uploading files or
-hashes to third-party services.
-Strong, unique passwords and password managers help reduce the risk
-of dictionary-based password recovery.
-🛡️ Security Recommendations
-Use long, unique passwords or passphrases rather than predictable
-words and number combinations.
-Avoid common passwords, personal details, dictionary words, and
-predictable patterns.
-Use a reputable password manager to generate and store unique
-credentials.
-Protect sensitive PDFs with strong encryption and a robust password.
-Avoid uploading confidential documents or password hashes to online
-tools unless the service is trusted and its data-handling policy has
-been reviewed.
-Apply access controls and share protected documents only with
-intended recipients.
-For organizations, establish password policies and provide user
-awareness training.
+🏁 Results & Comparison
+Test method	Approach	Outcome
+John the Ripper / Johnny	Local hash-based dictionary attack	Password recovered
+Networkwalks tools	Online hash extraction and dictionary attack	Password recovered
+Recovered test password: `password1`
+Both methods recovered the same password and allowed the protected PDF to be opened. This demonstrates how a weak, commonly used password can be vulnerable to dictionary-based guessing.
+🔎 Security Lessons
+A password that is common or predictable can be recovered by automated guessing.
+Password length and uniqueness matter; avoid dictionary words, predictable patterns, and reused passwords.
+Use a long, unique passphrase or a password manager to generate and store strong passwords.
+Apply encryption with a strong password when protecting sensitive PDF documents.
+Treat extracted password hashes as sensitive security material and do not publish them.
+📄 Full Technical Report
+The detailed report contains the project background, objectives, methodology, comparison of both approaches, findings, security recommendations, and a clickable evidence index.
+➡️ Open / Download the Week 3 Technical Report (PDF)
 📁 Suggested Repository Structure
-``` text
+```text
 Networkwalks-Week-3/
 ├── README.md
 ├── Week3_Report.pdf
 └── Screenshots/
-    ├── John_the_Ripper/
+    ├── John-the-Ripper/
     │   ├── JTR-01.png
-    │   ├── JTR-02.png
-    │   └── ... JTR-14.png
-    └── Networkwalks_Tools/
+    │   ├── ...
+    │   └── JTR-14.png
+    └── Networkwalks-Tools/
         ├── NW-01.png
-        ├── NW-02.png
-        └── ... NW-07.png
+        ├── ...
+        └── NW-07.png
 ```
-The screenshot links above point to the GitHub-hosted images supplied
-with this project. If you download the images into the repository, you
-can replace each external screenshot URL with a relative path such as
-`Screenshots/John_the_Ripper/JTR-01.png`.
-📄 Full Technical Report
-Open or download the Week 3 PDF Report
-The report provides the structured methodology, results, comparison,
-security observations, and separate evidence references for both tools.
-⚖️ Ethical and Authorized Use
-This work was conducted as an educational lab exercise on a test PDF
-within the internship activity. Password auditing should only be
-performed on files for which you have explicit authorization. Do not use
-these techniques to attempt unauthorized access to private documents or
-data.
-👨‍💻 Author
-Ibrahim Idris Ibrahim  
-Networkwalks Cybersecurity Internship --- Batch B082  
-Week 3: Cryptography and Password Security
----
-```{=html}
-<p align="center">
-```
-`<b>`{=html}Learn • Practice • Document •
-Improve`</b>`{=html}`<br>`{=html} `<i>`{=html}Building practical
-cybersecurity skills through responsible hands-on learning.`</i>`{=html}
-```{=html}
-</p>
-```
+The screenshot gallery above uses the original GitHub attachment links. If you also download the images into the folders shown above, you can replace the remote image URLs with relative repository paths later.
+⚖️ Ethical Use & Disclaimer
+This project was completed for educational and authorized cybersecurity training. Password-auditing tools must only be used on files and systems that you own or have explicit permission to assess. Do not use these techniques to access another person's protected documents.
+🙌 Acknowledgement
+Thanks to NETWORKWALKS for the practical learning opportunity and hands-on exposure to password security and cryptographic auditing.
+<div align="center">
+Learning by doing. Building practical cybersecurity skills.
+</div>
