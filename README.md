@@ -147,12 +147,6 @@ This result demonstrates that common, predictable passwords can be vulnerable to
 
 ---
 
-## 📄 Full Week 3 Technical Report
-
-For a more detailed explanation of the practical exercise, tools, methodology, results, and security recommendations, view the accompanying report:
-
-📥 **[View / Open the Complete Week 3 Report (PDF)](./Week3_Report.pdf)**
-
 > **Note:** Ensure `Week3_Report.pdf` is uploaded to the repository's main folder, alongside this `README.md`, so the link above opens correctly.
 
 ---
